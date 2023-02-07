@@ -1,0 +1,2240 @@
+fileFormatVersion: 2
+guid: 577aef8749554a547b9833e1a65205b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_0
+  - first:
+      213: 21300002
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_1
+  - first:
+      213: 21300004
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_2
+  - first:
+      213: 21300006
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_3
+  - first:
+      213: 21300008
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_4
+  - first:
+      213: 21300010
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_5
+  - first:
+      213: 21300012
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_6
+  - first:
+      213: 21300014
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_7
+  - first:
+      213: 21300016
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_8
+  - first:
+      213: 21300018
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_9
+  - first:
+      213: 21300020
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_10
+  - first:
+      213: 21300022
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_11
+  - first:
+      213: 21300024
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_12
+  - first:
+      213: 21300026
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_13
+  - first:
+      213: 21300028
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_14
+  - first:
+      213: 21300030
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_15
+  - first:
+      213: 21300032
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_16
+  - first:
+      213: 21300034
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_17
+  - first:
+      213: 21300036
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_18
+  - first:
+      213: 21300038
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_19
+  - first:
+      213: 21300040
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_20
+  - first:
+      213: 21300042
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_21
+  - first:
+      213: 21300044
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_22
+  - first:
+      213: 21300046
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_23
+  - first:
+      213: 21300048
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_24
+  - first:
+      213: 21300050
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_25
+  - first:
+      213: 21300052
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_26
+  - first:
+      213: 21300054
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_27
+  - first:
+      213: 21300056
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_28
+  - first:
+      213: 21300058
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_29
+  - first:
+      213: 21300060
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_30
+  - first:
+      213: 21300062
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_31
+  - first:
+      213: 21300064
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_32
+  - first:
+      213: 21300066
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_33
+  - first:
+      213: 21300068
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_34
+  - first:
+      213: 21300070
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_35
+  - first:
+      213: 21300072
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_36
+  - first:
+      213: 21300074
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_37
+  - first:
+      213: 21300076
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_38
+  - first:
+      213: 21300078
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_39
+  - first:
+      213: 21300080
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_40
+  - first:
+      213: 21300082
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_41
+  - first:
+      213: 21300084
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_42
+  - first:
+      213: 21300086
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_43
+  - first:
+      213: 21300088
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_44
+  - first:
+      213: 21300090
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_45
+  - first:
+      213: 21300092
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_46
+  - first:
+      213: 21300094
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_47
+  - first:
+      213: 21300096
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_48
+  - first:
+      213: 21300098
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_49
+  - first:
+      213: 21300100
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_50
+  - first:
+      213: 21300102
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_51
+  - first:
+      213: 21300104
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_52
+  - first:
+      213: 21300106
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_53
+  - first:
+      213: 21300108
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_54
+  - first:
+      213: 21300110
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_55
+  - first:
+      213: 21300112
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_56
+  - first:
+      213: 21300114
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_57
+  - first:
+      213: 21300116
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_58
+  - first:
+      213: 21300118
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_59
+  - first:
+      213: 21300120
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_60
+  - first:
+      213: 21300122
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_61
+  - first:
+      213: 21300124
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_62
+  - first:
+      213: 21300126
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_63
+  - first:
+      213: 21300128
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_64
+  - first:
+      213: 21300130
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_65
+  - first:
+      213: 21300132
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_66
+  - first:
+      213: 21300134
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_67
+  - first:
+      213: 21300136
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_68
+  - first:
+      213: 21300138
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_69
+  - first:
+      213: 21300140
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_70
+  - first:
+      213: 21300142
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_71
+  - first:
+      213: 21300144
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_72
+  - first:
+      213: 21300146
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_73
+  - first:
+      213: 21300148
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_74
+  - first:
+      213: 21300150
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_75
+  - first:
+      213: 21300152
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_76
+  - first:
+      213: 21300154
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_77
+  - first:
+      213: 21300156
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_78
+  - first:
+      213: 21300158
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_79
+  - first:
+      213: 21300160
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_80
+  - first:
+      213: 21300162
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_81
+  - first:
+      213: 21300164
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_82
+  - first:
+      213: 21300166
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_83
+  - first:
+      213: 21300168
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_84
+  - first:
+      213: 21300170
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_85
+  - first:
+      213: 21300172
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_86
+  - first:
+      213: 21300174
+    second: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_87
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 829
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708049e39faaa0a46b552f090e4bf308
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 825
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e577e6ab21fc0e44b9b591da62442db
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 821
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25453a42669e1545b1a1416fb0edc1d
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 818
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4824ccde84a626b47b8a9ca838ca1154
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_4
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 815
+        width: 67
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c48947c13a4db940b4e7de3512eb180
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_5
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 812
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f544ee0182ff5844f9f67177df256ef6
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 810
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaa62504c4d6374ba8f1cd96ef281bb
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_7
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 808
+        width: 80
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ef4e4bc08b4b64f83ca8bc9b993f85
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_8
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 807
+        width: 82
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845edb2f272225e41ad4d66f4040353e
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 705
+        width: 84
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce56207478382b4aa6986aef959596f
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 704
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438fd17dcf114b746bbdfedde1709d75
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_11
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 703
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9adb257254db904ab19814003171d5e
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 702
+        width: 90
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebcef493481b7d45839ba0f20103036
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_13
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 702
+        width: 91
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ec5aeddc9f1c48bf6874fbc1375c0
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_14
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 701
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3880d053f92e92943b02e28eb3caeba6
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_15
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 701
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9922d907a23da6744bdba3fbec766198
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_16
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 700
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e4d70f72d68cc4dadf6c82339c056b
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_17
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 700
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e51c1ae6fba3194f98f98ba54f3bcc6
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d705ff9a0d7c07c49877aae65e00b437
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 600
+        width: 95
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef14b1e272771e409c744701eb6df56
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 498
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c30d4019cf6474fbe011ff7f8ca236
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_21
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 600
+        width: 96
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c24a6d7eb1a64488d5d99518f9620b
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 498
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc675e93c79ced4a88020a493ade506
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_23
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 600
+        width: 97
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bc7860cb1fec14bab6857d8b0dc925
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_24
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 597
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e471e7167313ee2409fb00190968e016
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_25
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 596
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8617e752e5df064ab9941ab5e5dad7d
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_26
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 597
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee848e1864917f4e9affa8290bf91da
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_27
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 597
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9bee7a8e81f41f4589712b62f2646fa
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 598
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f768649374ad3b4fba628f4174ae138
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_29
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 598
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd870c107f144c4da6345dc572339ec
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_30
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 598
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c378aa2975c9f4d9ece79f3035e5c3
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 498
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9aa9754aedd0141adc45939c14dd27
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 498
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c567f190c25e44287b8da460684768
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_33
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 498
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffcb8678145e344396165f2aa4dbd19
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_34
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 498
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90756fe03aaac08439379610a51a80f9
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_35
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 498
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3507180f8066324190244536c39655d
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_36
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 502
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e701a77b23f1bf4489f74a52535b6bbf
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_37
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1314be2039d4347bf021e2b506c082
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_38
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63ab69e20d8df84da795ccc66f405d7
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_39
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e109c8296bc939642b779622b6946881
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_40
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c241ec0457154a241a1245090a7c659d
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_41
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aeab3de3835bf449344957a56f669f
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_42
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dd575cb99c2f84c96457f5cf60fb3a
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_43
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24a5caf6fc253842b73b4deb2ce7b4c
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_44
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 402
+        width: 96
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9657421fa5e0274c99b82037c24cb40
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_45
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 412
+        width: 76
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c75918dae259ea4081cb3ce6957d9b0
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_46
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 312
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a5a975d07ffb1479e5f50bbd4ab4dd
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_47
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 313
+        width: 73
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ac08b4d6771b44686b27409ffd8946
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_48
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 314
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df341885029d04641a5e9f8843f8cf88
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_49
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 314
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44645c6ab44437749b5fab7d065170e8
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_50
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 315
+        width: 68
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900c36d9a6c594148a2ab53399136fb6
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_51
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 315
+        width: 66
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a782452883765e243aa2aeb6d64a8b21
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_52
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 316
+        width: 63
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963ccde941229174fbb3d1ac96ac4b1e
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_53
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 318
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5091a30fde738674d8e911c1879730d0
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_54
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 319
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe354e592ac12141998f3d62e84ee78
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_55
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 220
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e228652cab8dd40951e8954721614f
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_56
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 221
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964684ae60c99c54faaa38924ffdb923
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_57
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 223
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce81d3fe9b20fe4daf07e351a174475
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_58
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 223
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105ed65f39e6f2f48841bbece3cde35c
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_59
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 224
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd851c83a9eff3499b391156e2f18bd
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_60
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 226
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c569e63a257884abf86ac029d3c547
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_61
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 232
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec8e6c6b5303be429322e1bc1ff559c
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_62
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 227
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff61ba7a5c190741a78a83a7e2d4629
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_63
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 233
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e3efdd910e4a547ab0f8187378659b
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_64
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 228
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4350f488efe2ce443bba836271be1526
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_65
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 233
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1942c2e42caad40b34e651f5bee81d
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_66
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 229
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044a32cadf62f4b4b99284f1c224eadc
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_67
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 134
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2f13c59ecebda499fce64c0ebeef39
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_68
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 134
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8cc1c79ebd06949a34930e1aca57bf
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_69
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 130
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979327bbdf0267f4ebb5e585438fffbd
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_70
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 135
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80c058050080344e89af3d3f0ed7b5e
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_71
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 132
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ef998f22b51c84e8552d00d8188504
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_72
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 131
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60f575333f2ad6419d397833a21ca3e
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_73
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 137
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fa201ce6825e742bb43d91aa92e7ee
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_74
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 134
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250a8e13800bb65478a3e22be5eba02e
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_75
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 133
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3bd7c15c9530c419e602ddb06cac8b
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_76
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 134
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26423154cfe3f4e47b5ca5c7944e3d8d
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_77
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 135
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d494379510c98ec40b7d10d4217dc6ac
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_78
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 134
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763a9d7669b31a1469b6b3bbdd40339e
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_79
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 138
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49d1c6063f5f954390a334e3063e8ef
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_80
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 134
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671d1f35c3ce2f84bb56f90bf2c2c4fb
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_81
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 140
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31581c0c11fb08b4d9645a6984ed35fa
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_82
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 135
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b3ee46c807bbf45982e57076a0f130
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_83
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 141
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3315be2915fbef848af6f9bea3de4d34
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_84
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 135
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa8582d994606a47bd464d0d42f4ec1
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_85
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 136
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91da031b6c89585468491f0427e74827
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_86
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 36
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0aa9c1937b45044b91066310424cc57
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kissclipart-explosion-sprite-sheet-clipart-sprite-explosion-an-a4229d97dc312fa5_87
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 39
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9986e4fed3bd7a49851e146ca0d171a
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eb242e2170c8f4b448c07cdcda36347e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
