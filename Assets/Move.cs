@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,6 +42,9 @@ public class Move : MonoBehaviour
 
     public PlayerSound sound;
 
+
+	private Yodo1U3dBannerAdView banner;
+	
     void Start()
     {
         //MobileAds.Initialize(appIdAdmob);
@@ -57,11 +60,7 @@ public class Move : MonoBehaviour
         SetDelegates();
         
 
-        StartCoroutine(BannerCoroutine());
-        
-        if(Yodo1U3dMas.IsBannerAdLoaded()){
-            Yodo1U3dMas.ShowBannerAd();
-        }
+        //StartCoroutine(BannerCoroutine());
 
         extraLife=false;
 
@@ -79,7 +78,22 @@ public class Move : MonoBehaviour
 
         StartCoroutine(scoreInc());
 
-        
+		this.RequestBanner();
+    }
+
+    private void RequestBanner()
+    {
+        // Clean up banner before reusing
+        if (banner != null)
+        {
+            banner.Destroy();
+        }
+
+        // Create a 320x50 banner at top of the screen
+        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
+
+		banner.LoadAd();
+
     }
 
     private bool right=false,left=false;
@@ -522,7 +536,7 @@ public class Move : MonoBehaviour
 
             if (success)
             {
-                StartCoroutine(BannerCoroutine());
+                //StartCoroutine(BannerCoroutine());
             }
             else
             {
@@ -566,25 +580,7 @@ public class Move : MonoBehaviour
         });
     }
     bool isBannerShown = false;
-    IEnumerator BannerCoroutine()
-    {
-        yield return new WaitForSeconds(2.0f);
-        if (isBannerShown == false)
-        {
-            if (Yodo1U3dMas.IsBannerAdLoaded())
-            {
-                Yodo1U3dMas.ShowBannerAd();
-            }
-            else
-            {
-                StartCoroutine(BannerCoroutine());
-            }
-        }
-
-    }
-
-   
-
+  
     /*private InterstitialAd intersitional;
     private BannerView banner;
 

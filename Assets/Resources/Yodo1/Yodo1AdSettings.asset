@@ -15,12 +15,14 @@ MonoBehaviour:
   androidSettings:
     AppKey: od3wT8wXli
     AdmobAppID: ca-app-pub-5784311004955543~6266449623
+    BundleID: com.VertexStudioGame.Aqua
     GooglePlayStore: 1
     ChineseAndroidStores: 0
     Channel: 
   iOSSettings:
     AppKey: bB3HpRZhvs
     AdmobAppID: ca-app-pub-5580537606944457~2166718551
+    BundleID: 
     ChinaRegion: 0
     GlobalRegion: 1
     AppLovinSdkKey: xcGD2fy-GdmiZQapx_kUSy5SMKyLoXBk8RyB5u9MVv34KetGdbl4XrXvAUFy0Qg9scKyVTI0NM4i_yzdXih4XE

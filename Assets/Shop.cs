@@ -13,6 +13,9 @@ public class Shop : MonoBehaviour
 
     public GameObject loadingPanel;
     public Slider loadingSlider;
+    
+    	private Yodo1U3dBannerAdView banner;
+
 
     IEnumerator loadAsync(int id)
     {
@@ -43,13 +46,6 @@ public class Shop : MonoBehaviour
         InitializeSdk();
         SetPrivacy(true, false, false);
         SetDelegates();
-        
-
-        StartCoroutine(BannerCoroutine());
-        
-        if(Yodo1U3dMas.IsBannerAdLoaded()){
-            Yodo1U3dMas.ShowBannerAd();
-        }
 
         
         money.text=PlayerPrefs.GetInt("Coin").ToString();
@@ -76,6 +72,23 @@ public class Shop : MonoBehaviour
 
 
         updateItems();
+        
+		this.RequestBanner();
+    }
+
+    private void RequestBanner()
+    {
+        // Clean up banner before reusing
+        if (banner != null)
+        {
+            banner.Destroy();
+        }
+
+        // Create a 320x50 banner at top of the screen
+        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
+
+		banner.LoadAd();
+
     }
 
     void updateItems(){
@@ -151,7 +164,7 @@ public class Shop : MonoBehaviour
 
             if (success)
             {
-                StartCoroutine(BannerCoroutine());
+                //StartCoroutine(BannerCoroutine());
             }
             else
             {
@@ -218,22 +231,6 @@ public class Shop : MonoBehaviour
         });
     }
     bool isBannerShown = false;
-    IEnumerator BannerCoroutine()
-    {
-        yield return new WaitForSeconds(2.0f);
-        if (isBannerShown == false)
-        {
-            if (Yodo1U3dMas.IsBannerAdLoaded())
-            {
-                Yodo1U3dMas.ShowBannerAd();
-            }
-            else
-            {
-                StartCoroutine(BannerCoroutine());
-            }
-        }
-
-    }
 
           /*private void HandleShowResult(ShowResult result)
           {

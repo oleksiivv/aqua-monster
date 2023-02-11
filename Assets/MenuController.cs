@@ -18,6 +18,8 @@ public class MenuController : MonoBehaviour
     public int storyLen=3;
 
     public GameObject plane;
+    
+    	private Yodo1U3dBannerAdView banner;
 
 
     /*
@@ -31,6 +33,8 @@ public class MenuController : MonoBehaviour
       And remember that aquariums with different colors have different featuresfeatures, 
       meaning that them are not as easy as it can seems.
     */
+    
+    
 
     void Start()
     {
@@ -62,11 +66,7 @@ public class MenuController : MonoBehaviour
         SetDelegates();
         
 
-        StartCoroutine(BannerCoroutine());
-
-        if(Yodo1U3dMas.IsBannerAdLoaded()){
-            Yodo1U3dMas.ShowBannerAd();
-        }
+        //StartCoroutine(BannerCoroutine());
 
         
         // PlayerPrefs.SetInt("Completed0",1);
@@ -77,7 +77,25 @@ public class MenuController : MonoBehaviour
         // PlayerPrefs.SetInt("Completed5",1);
         // PlayerPrefs.SetInt("Completed6",1);
         // PlayerPrefs.SetInt("Completed7",1);
+		this.RequestBanner();
     }
+
+    private void RequestBanner()
+    {
+        // Clean up banner before reusing
+        if (banner != null)
+        {
+            banner.Destroy();
+        }
+
+        // Create a 320x50 banner at top of the screen
+        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
+
+		banner.LoadAd();
+
+    }
+    
+    
     bool storyLine=true;
     public void nextPanel(int currentPanel){
 
@@ -186,7 +204,7 @@ public class MenuController : MonoBehaviour
 
             if (success)
             {
-                StartCoroutine(BannerCoroutine());
+                //StartCoroutine(BannerCoroutine());
             }
             else
             {
@@ -253,23 +271,6 @@ public class MenuController : MonoBehaviour
         });
     }
     bool isBannerShown = false;
-    IEnumerator BannerCoroutine()
-    {
-        yield return new WaitForSeconds(2.0f);
-        if (isBannerShown == false)
-        {
-            if (Yodo1U3dMas.IsBannerAdLoaded())
-            {
-                Yodo1U3dMas.ShowBannerAd();
-            }
-            else
-            {
-                StartCoroutine(BannerCoroutine());
-            }
-        }
-
-    }
-
           /*private void HandleShowResult(ShowResult result)
           {
             switch (result)
