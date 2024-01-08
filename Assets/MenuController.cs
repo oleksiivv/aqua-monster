@@ -77,7 +77,10 @@ public class MenuController : MonoBehaviour
         // PlayerPrefs.SetInt("Completed5",1);
         // PlayerPrefs.SetInt("Completed6",1);
         // PlayerPrefs.SetInt("Completed7",1);
-		this.RequestBanner();
+		    
+        if(Application.loadedLevel>=1 && Application.loadedLevel != 20){
+            this.RequestBanner();
+        }
     }
 
     private void RequestBanner()
@@ -89,7 +92,7 @@ public class MenuController : MonoBehaviour
         }
 
         // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
+        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerBottom | Yodo1U3dBannerAdPosition.BannerRight);
 
 		banner.LoadAd();
 

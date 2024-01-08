@@ -78,7 +78,9 @@ public class Move : MonoBehaviour
 
         StartCoroutine(scoreInc());
 
-		this.RequestBanner();
+		if(Application.loadedLevel>=1 && Application.loadedLevel != 20){
+            this.RequestBanner();
+        }
     }
 
     private void RequestBanner()
@@ -90,7 +92,7 @@ public class Move : MonoBehaviour
         }
 
         // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
+        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerBottom | Yodo1U3dBannerAdPosition.BannerRight);
 
 		banner.LoadAd();
 
