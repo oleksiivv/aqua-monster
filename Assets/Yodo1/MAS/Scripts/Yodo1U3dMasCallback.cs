@@ -8,9 +8,12 @@
     {
         private const int FLAG_INITIALIZE = 0;
         private const int FLAG_AD_EVENT = 1;
+        private const int FLAG_APP_EVENT = 2;
 
         private const int EVENT_INITIALIZE_FAILURE = 0;
         private const int EVENT_INITIALIZE_SUCCESS = 1;
+
+        private const int EVENT_APP_FOREGROUND = 1;
 
         static bool _initialized = false;
 
@@ -129,6 +132,19 @@
             }
         }
 
+        private static System.Action _onAppEnterForegroundEvent;
+        public static event System.Action OnAppEnterForegroundEvent
+        {
+            add
+            {
+                _onAppEnterForegroundEvent += value;
+            }
+            remove
+            {
+                _onAppEnterForegroundEvent -= value;
+            }
+        }
+
         private static System.Action _onBannerAdOpenedEvent;
         private static System.Action<Yodo1U3dAdError> _onBannerAdErrorEvent;
         private static System.Action _onBannerAdClosedEvent;
@@ -172,12 +188,25 @@
             }
         }
 
+        private static System.Action _onInterstitialAdOpeningEvent;
         private static System.Action _onInterstitialAdOpenedEvent;
         private static System.Action _onInterstitialAdClosedEvent;
         private static System.Action<Yodo1U3dAdError> _onInterstitialAdErrorEvent;
 
         public class Interstitial
         {
+            public static event System.Action OnAdOpeningEvent
+            {
+                add
+                {
+                    _onInterstitialAdOpeningEvent += value;
+                }
+                remove
+                {
+                    _onInterstitialAdOpeningEvent -= value;
+                }
+            }
+
             /**
              * Fired when an interstitial ad is displayed (may not be received by Unity until the interstitial ad closes).
              */
@@ -477,6 +506,16 @@
                     default:
                         break;
                 }
+            } else if (flag == FLAG_APP_EVENT)
+            {
+                if (dataDic.ContainsKey("status"))
+                {
+                    int status = int.Parse(dataDic["status"].ToString());
+                    if (status == EVENT_APP_FOREGROUND)
+                    {
+                        InvokeEvent(_onAppEnterForegroundEvent);
+                    }
+                }
             }
         }
 
@@ -506,6 +545,9 @@
                         UnPause();
                     }
                     InvokeEvent(_onInterstitialAdErrorEvent, adError);
+                    break;
+                case Yodo1U3dAdEvent.AdOpening:
+                    InvokeEvent(_onInterstitialAdOpeningEvent);
                     break;
                 case Yodo1U3dAdEvent.AdOpened:
                     Pause();

@@ -130,6 +130,16 @@ public class Yodo1U3dAdsIOS
         }
     }
 
+    [DllImport(LIB_NAME)]
+    private static extern void UnityMasShowPopupToReportAd();
+    public static void ShowPopupToReportAd()
+    {
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            UnityMasShowPopupToReportAd();
+        }
+    }
+
     /// <summary>
     /// 设置广告配置
     /// </summary>

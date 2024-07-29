@@ -167,6 +167,23 @@ namespace Yodo1.MAS
             }
         }
 
+
+        public static void ShowPopupToReportAd()
+        {
+            if (Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+#if UNITY_IPHONE
+                Yodo1U3dAdsIOS.ShowPopupToReportAd();
+#endif
+            }
+            else if (Application.platform == RuntimePlatform.Android)
+            {
+#if UNITY_ANDROID
+                Yodo1U3dAdsAndroid.ShowPopupToReportAd();
+#endif
+            }
+        }
+
         #region Privacy Methods
         /// <summary>
         /// MAS SDK requires that publishers set a flag indicating whether a user located in the European Economic Area (i.e., EEA/GDPR data subject) has provided opt-in consent for the collection and use of personal data.

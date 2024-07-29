@@ -15,6 +15,10 @@ public class Yodo1AdsTest : MonoBehaviour
 
     void Start()
     {
+        Yodo1U3dMasCallback.OnAppEnterForegroundEvent += ()=>
+        {
+            Debug.Log(Yodo1U3dMas.TAG + ": The game has entered the foreground");
+        };
         Yodo1U3dMasCallback.OnSdkInitializedEvent += (success, error) =>
         {
             Debug.Log(Yodo1U3dMas.TAG + "OnSdkInitializedEvent, success:" + success + ", error: " + error.ToString());
@@ -395,6 +399,7 @@ public class Yodo1AdsTest : MonoBehaviour
     {
         Yodo1U3dInterstitialAd.GetInstance().OnAdLoadedEvent += OnInterstitialAdLoadedEvent;
         Yodo1U3dInterstitialAd.GetInstance().OnAdLoadFailedEvent += OnInterstitialAdLoadFailedEvent;
+        Yodo1U3dInterstitialAd.GetInstance().OnAdOpeningEvent += OnInterstitialAdOpeningEvent;
         Yodo1U3dInterstitialAd.GetInstance().OnAdOpenedEvent += OnInterstitialAdOpenedEvent;
         Yodo1U3dInterstitialAd.GetInstance().OnAdOpenFailedEvent += OnInterstitialAdOpenFailedEvent;
         Yodo1U3dInterstitialAd.GetInstance().OnAdClosedEvent += OnInterstitialAdClosedEvent;
@@ -417,6 +422,11 @@ public class Yodo1AdsTest : MonoBehaviour
     private void OnInterstitialAdLoadFailedEvent(Yodo1U3dInterstitialAd ad, Yodo1U3dAdError adError)
     {
         Debug.Log(Yodo1U3dMas.TAG + "OnInterstitialAdLoadFailedEvent event received with error: " + adError.ToString());
+    }
+
+    private void OnInterstitialAdOpeningEvent(Yodo1U3dInterstitialAd ad)
+    {
+        Debug.Log(Yodo1U3dMas.TAG + "OnInterstitialAdOpeningEvent event received");
     }
 
     private void OnInterstitialAdOpenedEvent(Yodo1U3dInterstitialAd ad)
@@ -537,6 +547,7 @@ public class Yodo1AdsTest : MonoBehaviour
     {
         Yodo1U3dRewardAd.GetInstance().OnAdLoadedEvent += OnRewardAdLoadedEvent;
         Yodo1U3dRewardAd.GetInstance().OnAdLoadFailedEvent += OnRewardAdLoadFailedEvent;
+        Yodo1U3dRewardAd.GetInstance().OnAdOpeningEvent += OnRewardAdOpeningEvent;
         Yodo1U3dRewardAd.GetInstance().OnAdOpenedEvent += OnRewardAdOpenedEvent;
         Yodo1U3dRewardAd.GetInstance().OnAdOpenFailedEvent += OnRewardAdOpenFailedEvent;
         Yodo1U3dRewardAd.GetInstance().OnAdClosedEvent += OnRewardAdClosedEvent;
@@ -560,6 +571,11 @@ public class Yodo1AdsTest : MonoBehaviour
     private void OnRewardAdLoadFailedEvent(Yodo1U3dRewardAd ad, Yodo1U3dAdError adError)
     {
         Debug.Log(Yodo1U3dMas.TAG + "OnRewardAdLoadFailedEvent event received with error: " + adError.ToString());
+    }
+
+    private void OnRewardAdOpeningEvent(Yodo1U3dRewardAd ad)
+    {
+        Debug.Log(Yodo1U3dMas.TAG + "OnRewardAdOpeningEvent event received");
     }
 
     private void OnRewardAdOpenedEvent(Yodo1U3dRewardAd ad)
@@ -684,6 +700,7 @@ public class Yodo1AdsTest : MonoBehaviour
         // Ad Events
         Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdLoadedEvent += OnRewardedInterstitialAdLoadedEvent;
         Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdLoadFailedEvent += OnRewardedInterstitialAdLoadFailedEvent;
+        Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdOpeningEvent += OnRewardedInterstitialAdOpeningEvent;
         Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdOpenedEvent += OnRewardedInterstitialAdOpenedEvent;
         Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdOpenFailedEvent += OnRewardedInterstitialAdOpenFailedEvent;
         Yodo1U3dRewardedInterstitialAd.GetInstance().OnAdClosedEvent += OnRewardedInterstitialAdClosedEvent;
@@ -723,6 +740,11 @@ public class Yodo1AdsTest : MonoBehaviour
       Debug.Log("[Yodo1 Mas] OnRewardedInterstitialAdLoadFailedEvent event received with error: " + adError.ToString());
     }
 
+    private void OnRewardedInterstitialAdOpeningEvent(Yodo1U3dRewardedInterstitialAd ad)
+    {
+        Debug.Log("[Yodo1 Mas] OnRewardedInterstitialAdOpeningEvent event received");
+    }
+
     private void OnRewardedInterstitialAdOpenedEvent(Yodo1U3dRewardedInterstitialAd ad)
     {
         Debug.Log("[Yodo1 Mas] OnRewardedInterstitialAdOpenedEvent event received");
@@ -759,6 +781,7 @@ public class Yodo1AdsTest : MonoBehaviour
         // Ad Events
         Yodo1U3dAppOpenAd.GetInstance().OnAdLoadedEvent += OnAppOpenAdLoadedEvent;
         Yodo1U3dAppOpenAd.GetInstance().OnAdLoadFailedEvent += OnAppOpenAdLoadFailedEvent;
+        Yodo1U3dAppOpenAd.GetInstance().OnAdOpeningEvent += OnAppOpenAdOpeningEvent;
         Yodo1U3dAppOpenAd.GetInstance().OnAdOpenedEvent += OnAppOpenAdOpenedEvent;
         Yodo1U3dAppOpenAd.GetInstance().OnAdOpenFailedEvent += OnAppOpenAdOpenFailedEvent;
         Yodo1U3dAppOpenAd.GetInstance().OnAdClosedEvent += OnAppOpenAdClosedEvent;
@@ -796,6 +819,11 @@ public class Yodo1AdsTest : MonoBehaviour
     private void OnAppOpenAdLoadFailedEvent(Yodo1U3dAppOpenAd ad, Yodo1U3dAdError adError)
     {
         Debug.Log("[Yodo1 Mas] OnAppOpenAdLoadFailedEvent event received with error: " + adError.ToString());
+    }
+
+    private void OnAppOpenAdOpeningEvent(Yodo1U3dAppOpenAd ad)
+    {
+        Debug.Log("[Yodo1 Mas] OnAppOpenAdOpeningEvent event received");
     }
 
     private void OnAppOpenAdOpenedEvent(Yodo1U3dAppOpenAd ad)
