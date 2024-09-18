@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.Advertisements;
 using System;
-//using GoogleMobileAds.Api;
-using Yodo1.MAS;
 
+[RequireComponent(typeof(AdmobController))]
 public class Move : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     private int force=0;
     public CameraMove camera;
     public Text score,best;
@@ -36,31 +32,16 @@ public class Move : MonoBehaviour
 
     public bool extraLife=false;
 
-    private string appId="4035249";
-
     public bool lastLevel=false;
 
     public PlayerSound sound;
 
-
-	private Yodo1U3dBannerAdView banner;
+    private AdmobController admob;
 	
     void Start()
     {
-        //MobileAds.Initialize(appIdAdmob);
-        //RequestConfigurationAd();
-        //RequestBannerAd();
-
         sound=GetComponent<PlayerSound>();
         Time.timeScale=1;
-
-        //Advertisement.Initialize(appId,false);
-        InitializeSdk();
-        SetPrivacy(true, false, false);
-        SetDelegates();
-        
-
-        //StartCoroutine(BannerCoroutine());
 
         extraLife=false;
 
@@ -78,22 +59,7 @@ public class Move : MonoBehaviour
 
         StartCoroutine(scoreInc());
 
-		this.RequestBanner();
-    }
-
-    private void RequestBanner()
-    {
-        // Clean up banner before reusing
-        if (banner != null)
-        {
-            banner.Destroy();
-        }
-
-        // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
-
-		banner.LoadAd();
-
+       admob = GetComponent<AdmobController>();
     }
 
     private bool right=false,left=false;
@@ -119,9 +85,6 @@ public class Move : MonoBehaviour
             }
         }
         if(Input.GetMouseButtonUp(0) ){
-            
-
-            
             anim.jump();
             //gameObject.GetComponent<Rigidbody>().isKinematic=false;
             //if(PlayerPrefs.GetInt("studyComplete")==1){
@@ -177,11 +140,6 @@ public class Move : MonoBehaviour
 
                 Invoke("cleanAnim",0.8f);
             }
-        
-        
-        
-
-
         
         if(other.gameObject.tag=="Death"){
             anim.person.gameObject.transform.GetChild(2).gameObject.GetComponent<BoxCollider>().enabled=true;
@@ -316,16 +274,8 @@ public class Move : MonoBehaviour
                 
                             
                 if(!playedOnce){
-                    if(cnt%3==1){
-                        /*if(Advertisement.IsReady("video") ){
-                            Advertisement.Show("video");
-                        }
-                        else{
-                            showIntersitionalAd();
-                        }*/
-                        if(Yodo1U3dMas.IsInterstitialAdLoaded()){
-                            Yodo1U3dMas.ShowInterstitialAd();
-                        }
+                    if(cnt%2==1){
+                        admob.showIntersitionalAd();
                     }
                     cnt++;
                     print("Rotation: "+transform.rotation.z.ToString());
@@ -515,163 +465,5 @@ public class Move : MonoBehaviour
         
     }
 
-
-    private void SetPrivacy(bool gdpr, bool coppa, bool ccpa)
-    {
-        Yodo1U3dMas.SetGDPR(gdpr);
-        Yodo1U3dMas.SetCOPPA(coppa);
-        Yodo1U3dMas.SetCCPA(ccpa);
-    }
-
-    private void InitializeSdk()
-    {
-        Yodo1U3dMas.InitializeSdk();
-    }
-
-    private void SetDelegates()
-    {
-        Yodo1U3dMas.SetInitializeDelegate((bool success, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InitializeDelegate, success:" + success + ", error: \n" + error.ToString());
-
-            if (success)
-            {
-                //StartCoroutine(BannerCoroutine());
-            }
-            else
-            {
-
-            }
-        });
-
-        Yodo1U3dMas.SetBannerAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] BannerdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Banner ad error, " + error.ToString());
-                    break;
-            }
-        });
-
-        Yodo1U3dMas.SetInterstitialAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InterstitialAdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Interstital ad error, " + error.ToString());
-                    break;
-            }
-
-        });
-    }
     bool isBannerShown = false;
-  
-    /*private InterstitialAd intersitional;
-    private BannerView banner;
-
-    private string appIdAdmob="ca-app-pub-4962234576866611~8649087922";
-    private string intersitionalId="ca-app-pub-4962234576866611/2331774749";
-    private string bannerId="ca-app-pub-4962234576866611/2972961084";
-
-
-     AdRequest AdRequestBuild(){
-         return new AdRequest.Builder().Build();
-     }
-
-
-      void RequestConfigurationAd(){
-          intersitional=new InterstitialAd(intersitionalId);
-          AdRequest request=AdRequestBuild();
-          intersitional.LoadAd(request);
-          intersitional.OnAdLoaded+=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening+=this.HandleOnAdOpening;
-          intersitional.OnAdClosed+=this.HandleOnAdClosed;
-
-    }
-
-
-      public bool showIntersitionalAd(){
-          if(intersitional.IsLoaded()){
-              intersitional.Show();
-          }
-
-          return intersitional.IsLoaded();
-      }
-
-      private void OnDestroy(){
-          DestroyIntersitional();
-
-          intersitional.OnAdLoaded-=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening-=this.HandleOnAdOpening;
-          intersitional.OnAdClosed-=this.HandleOnAdClosed;
-
-      }
-
-      private void HandleOnAdClosed(object sender, EventArgs e)
-      {
-          intersitional.OnAdLoaded-=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening-=this.HandleOnAdOpening;
-          intersitional.OnAdClosed-=this.HandleOnAdClosed;
-
-          //RequestConfigurationAd();
-
-        
-      }
-
-     private void HandleOnAdOpening(object sender, EventArgs e)
-     {
-        
-     }
-
-     private void HandleOnAdLoaded(object sender, EventArgs e)
-     {
-        
-     }
-
-     public void DestroyIntersitional(){
-         intersitional.Destroy();
-     }
-
-
-
-
-    //baner
-
-
-    AdRequest AdRequestBannerBuild(){
-        return new AdRequest.Builder().Build();
-    }
-
-
-    public void RequestBannerAd(){
-        banner=new BannerView(bannerId,AdSize.Banner,AdPosition.Bottom);
-        AdRequest request = AdRequestBannerBuild();
-        banner.LoadAd(request);
-    }
-
-    public void DestroyBanner(){
-        if(banner!=null){
-            banner.Destroy();
-        }
-    }
-    */
-
-
-
-
 }

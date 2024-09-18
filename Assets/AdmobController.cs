@@ -1,220 +1,200 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using GoogleMobileAds.Api;
+using GoogleMobileAds.Api;
 using System;
-using Yodo1.MAS;
 
 public class AdmobController : MonoBehaviour
 {
-    /*private InterstitialAd intersitional;
+    private InterstitialAd intersitional;
 
-    private BannerView banner;
+	private bool showBanner = false;
+#if UNITY_IOS
+    private string appId="ca-app-pub-4962234576866611~8925183344";
+    private string bannerId="ca-app-pub-4962234576866611/6995393691";
+    private string intersitionalId="ca-app-pub-4962234576866611/7412791126";
+#else
+    private string appId="ca-app-pub-4962234576866611~8925183344";
+    private string bannerId="ca-app-pub-4962234576866611/6995393691";
+    private string intersitionalId="ca-app-pub-4962234576866611/7412791126";
+#endif
 
-    private string appId="ca-app-pub-4962234576866611~8649087922";
-    private string intersitionalId="ca-app-pub-4962234576866611/2972961084";
+    public static int adsCounter=0;
 
-    private string bannerId="ca-app-pub-4962234576866611/2972961084";*/
-	private Yodo1U3dBannerAdView banner;
+    //public UnityAdsController unityAds;
 
-    
-    void Start(){
-        //MobileAds.Initialize(appId);
-        //RequestConfigurationAd();
-        //RequestBannerAd();
+    void Awake(){
+        RequestConfiguration requestConfiguration =
+            new RequestConfiguration.Builder()
+            .SetSameAppKeyEnabled(true).build();
+        MobileAds.SetRequestConfiguration(requestConfiguration);
 
-        InitializeSdk();
-        SetPrivacy(true, false, false);
-        SetDelegates();
-        
+        MobileAds.Initialize(initStatus => {
+            LoadLoadInterstitialAd();
+            CreateBannerView();
 
-        //StartCoroutine(BannerCoroutine());
-
-		this.RequestBanner();
-    }
-
-    private void RequestBanner()
-    {
-        // Clean up banner before reusing
-        if (banner != null)
-        {
-            banner.Destroy();
-        }
-
-        // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
-
-		banner.LoadAd();
-
-    }
-
-    private void SetPrivacy(bool gdpr, bool coppa, bool ccpa)
-    {
-        Yodo1U3dMas.SetGDPR(gdpr);
-        Yodo1U3dMas.SetCOPPA(coppa);
-        Yodo1U3dMas.SetCCPA(ccpa);
-    }
-
-    private void InitializeSdk()
-    {
-        Yodo1U3dMas.InitializeSdk();
-    }
-
-    private void SetDelegates()
-    {
-        Yodo1U3dMas.SetInitializeDelegate((bool success, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InitializeDelegate, success:" + success + ", error: \n" + error.ToString());
-
-            if (success)
-            {
-                //StartCoroutine(BannerCoroutine());
-            }
-            else
-            {
-
-            }
+            if(PlayerPrefs.GetInt("first-Open",0)==1 && Application.loadedLevel > 1 && Application.loadedLevel < 17){
+                LoadBannerAd();
+             }
         });
 
-        Yodo1U3dMas.SetBannerAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] BannerdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Banner ad error, " + error.ToString());
-                    break;
-            }
-        });
+         PlayerPrefs.SetInt("first-Open",1);
+     }
 
-        Yodo1U3dMas.SetInterstitialAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InterstitialAdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Interstital ad error, " + error.ToString());
-                    break;
-            }
-
-        });
-
-        Yodo1U3dMas.SetRewardedAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] RewardVideoDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has shown successful.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Reward video ad error, " + error);
-                    break;
-                case Yodo1U3dAdEvent.AdReward:
-                    Debug.Log("[Yodo1 Mas] Reward video ad reward, give rewards to the player.");
-                    break;
-            }
-
-        });
-    }
-    bool isBannerShown = false;
-
-    /*
-     AdRequest AdRequestBuild(){
+    AdRequest AdRequestBuild(){
          return new AdRequest.Builder().Build();
      }
 
-
-      void RequestConfigurationAd(){
-          intersitional=new InterstitialAd(intersitionalId);
-          AdRequest request=AdRequestBuild();
-          intersitional.LoadAd(request);
-          intersitional.OnAdLoaded+=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening+=this.HandleOnAdOpening;
-          intersitional.OnAdClosed+=this.HandleOnAdClosed;
-
-    }
-
-
       public bool showIntersitionalAd(){
-          if(intersitional.IsLoaded()){
-              intersitional.Show();
-          }
-
-          return intersitional.IsLoaded();
+        return showIntersitionalUnityAd();
       }
 
-      private void OnDestroy(){
-          DestroyIntersitional();
+      private InterstitialAd _interstitialAd;
 
-          intersitional.OnAdLoaded-=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening-=this.HandleOnAdOpening;
-          intersitional.OnAdClosed-=this.HandleOnAdClosed;
+    private BannerView _bannerView;
 
-      }
+    public void LoadLoadInterstitialAd()
+    {
+        // Clean up the old ad before loading a new one.
+        if (_interstitialAd != null)
+        {
+                _interstitialAd.Destroy();
+                _interstitialAd = null;
+        }
 
-      private void HandleOnAdClosed(object sender, EventArgs e)
-      {
-          intersitional.OnAdLoaded-=this.HandleOnAdLoaded;
-          intersitional.OnAdOpening-=this.HandleOnAdOpening;
-          intersitional.OnAdClosed-=this.HandleOnAdClosed;
+        Debug.Log("Loading the interstitial ad.");
 
-          //RequestConfigurationAd();
+        // create our request used to load the ad.
+        var adRequest = new AdRequest();
 
-        
-      }
+        // send the request to load the ad.
+        InterstitialAd.Load(intersitionalId, adRequest,
+            (InterstitialAd ad, LoadAdError error) =>
+            {
+                // if error is not null, the load request failed.
+                if (error != null || ad == null)
+                {
+                    Debug.LogError("interstitial ad failed to load an ad " +
+                                    "with error : " + error);
+                    return;
+                }
 
-     private void HandleOnAdOpening(object sender, EventArgs e)
-     {
-        
-     }
+                Debug.Log("Interstitial ad loaded with response : "
+                            + ad.GetResponseInfo());
 
-     private void HandleOnAdLoaded(object sender, EventArgs e)
-     {
-        
-     }
+                _interstitialAd = ad;
 
-     public void DestroyIntersitional(){
-         intersitional.Destroy();
-     }
-
-
-
-
-    //baner
-
-
-    AdRequest AdRequestBannerBuild(){
-        return new AdRequest.Builder().Build();
+                RegisterEventHandlers(_interstitialAd);
+                RegisterReloadHandler(_interstitialAd);
+            });
     }
 
 
-    public void RequestBannerAd(){
-        banner=new BannerView(bannerId,AdSize.Banner,AdPosition.Bottom);
-        AdRequest request = AdRequestBannerBuild();
-        banner.LoadAd(request);
+      public bool showIntersitionalUnityAd(){
+        if (_interstitialAd != null && _interstitialAd.CanShowAd())
+        {
+            Debug.Log("Showing interstitial ad.");
+            _interstitialAd.Show();
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+      }
+
+    public void CreateBannerView()
+    {
+        Debug.Log("Creating banner view");
+
+        // If we already have a banner, destroy the old one.
+        if (_bannerView != null)
+        {
+            DestroyBannerView();
+        }
+
+        // Create a 320x50 banner at top of the screen
+        _bannerView = new BannerView(bannerId, AdSize.Banner, AdPosition.Bottom);
     }
 
-    public void DestroyBanner(){
-        if(banner!=null){
-            banner.Destroy();
+    public void LoadBannerAd()
+    {
+        // create an instance of a banner view first.
+        if(_bannerView == null)
+        {
+            CreateBannerView();
+        }
+
+        // create our request used to load the ad.
+        var adRequest = new AdRequest();
+
+        // send the request to load the ad.
+        Debug.Log("Loading banner ad.");
+        _bannerView.LoadAd(adRequest);
+    }
+
+    public void DestroyBannerView()
+    {
+        if (_bannerView != null)
+        {
+            Debug.Log("Destroying banner view.");
+            _bannerView.Destroy();
+            _bannerView = null;
         }
     }
-    */
 
+    private void RegisterEventHandlers(InterstitialAd interstitialAd)
+      {
+          interstitialAd.OnAdPaid += (AdValue adValue) =>
+          {
+              Debug.Log(String.Format("Interstitial ad paid {0} {1}.",
+                  adValue.Value,
+                  adValue.CurrencyCode));
+          };
+
+          interstitialAd.OnAdImpressionRecorded += () =>
+          {
+              Debug.Log("Interstitial ad recorded an impression.");
+          };
+
+          interstitialAd.OnAdClicked += () =>
+          {
+              Debug.Log("Interstitial ad was clicked.");
+          };
+
+          interstitialAd.OnAdFullScreenContentOpened += () =>
+          {
+              Debug.Log("Interstitial ad full screen content opened.");
+          };
+
+          interstitialAd.OnAdFullScreenContentClosed += () =>
+          {
+              Debug.Log("Interstitial ad full screen content closed.");
+          };
+
+          interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
+          {
+              Debug.LogError("Interstitial ad failed to open full screen content " +
+                          "with error : " + error);
+          };
+      }
+
+      private void RegisterReloadHandler(InterstitialAd interstitialAd)
+      {
+          interstitialAd.OnAdFullScreenContentClosed += () =>
+          {
+              Debug.Log("Interstitial Ad full screen content closed.");
+
+              LoadLoadInterstitialAd();
+          };
+
+          interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
+          {
+              Debug.LogError("Interstitial ad failed to open full screen content " +
+                          "with error : " + error);
+
+              LoadLoadInterstitialAd();
+          };
+      }
 }

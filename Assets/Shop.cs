@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.Advertisements;
-using Yodo1.MAS;
 
+[RequireComponent(typeof(AdmobController))]
 public class Shop : MonoBehaviour
 {
     public void openScene(int id){
@@ -14,8 +13,7 @@ public class Shop : MonoBehaviour
     public GameObject loadingPanel;
     public Slider loadingSlider;
     
-    	private Yodo1U3dBannerAdView banner;
-
+    private AdmobController admob;
 
     IEnumerator loadAsync(int id)
     {
@@ -38,16 +36,8 @@ public class Shop : MonoBehaviour
 
     public Text money;
 
-    private string appId="4035249";
-
     void Start()
     {
-        //Advertisement.Initialize(appId,false);
-        InitializeSdk();
-        SetPrivacy(true, false, false);
-        SetDelegates();
-
-        
         money.text=PlayerPrefs.GetInt("Coin").ToString();
 
         items.Add(new Item(1,20,"Magnet"));
@@ -55,10 +45,6 @@ public class Shop : MonoBehaviour
         items.Add(new Item(3,60,"ExtraLife"));
         items.Add(new Item(4,80,"JetBoots"));
         items.Add(new Item(5,100,"JetPack"));
-
-
-
-
 
         //PlayerPrefs.SetInt("money",PlayerPrefs.GetInt("money")+3000);
         if (PlayerPrefs.GetInt("!sound") == 0)
@@ -70,25 +56,9 @@ public class Shop : MonoBehaviour
             audioController.GetComponent<AudioSource>().mute = true;
         }
 
+        admob = GetComponent<AdmobController>();
 
         updateItems();
-        
-		this.RequestBanner();
-    }
-
-    private void RequestBanner()
-    {
-        // Clean up banner before reusing
-        if (banner != null)
-        {
-            banner.Destroy();
-        }
-
-        // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
-
-		banner.LoadAd();
-
     }
 
     void updateItems(){
@@ -126,135 +96,15 @@ public class Shop : MonoBehaviour
 
     }
 
-
-
-
-    //
-
-
     public void ShowRewardedAd(){
-        // if (Advertisement.IsReady("rewardedVideo"))
-        // {
-        //     var options = new ShowOptions { resultCallback = HandleShowResult };
-        //     Advertisement.Show("rewardedVideo", options);
-        // }
+        admob.showIntersitionalAd();
+        PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
+        money.text=PlayerPrefs.GetInt("Coin").ToString();
 
-        if(Yodo1U3dMas.IsRewardedAdLoaded()){
-            Yodo1U3dMas.ShowRewardedAd();
-        }
+        //todo: replace with real ShowRewardedAd
     }
 
-    private void SetPrivacy(bool gdpr, bool coppa, bool ccpa)
-    {
-        Yodo1U3dMas.SetGDPR(gdpr);
-        Yodo1U3dMas.SetCOPPA(coppa);
-        Yodo1U3dMas.SetCCPA(ccpa);
-    }
-
-    private void InitializeSdk()
-    {
-        Yodo1U3dMas.InitializeSdk();
-    }
-
-    private void SetDelegates()
-    {
-        Yodo1U3dMas.SetInitializeDelegate((bool success, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InitializeDelegate, success:" + success + ", error: \n" + error.ToString());
-
-            if (success)
-            {
-                //StartCoroutine(BannerCoroutine());
-            }
-            else
-            {
-
-            }
-        });
-
-        Yodo1U3dMas.SetBannerAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] BannerdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Banner ad error, " + error.ToString());
-                    break;
-            }
-        });
-
-        Yodo1U3dMas.SetInterstitialAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InterstitialAdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Interstital ad error, " + error.ToString());
-                    break;
-            }
-
-        });
-
-        Yodo1U3dMas.SetRewardedAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] RewardVideoDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has shown successful.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Reward video ad error, " + error);
-                    break;
-                case Yodo1U3dAdEvent.AdReward:
-                    PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
-                    money.text=PlayerPrefs.GetInt("Coin").ToString();
-                    Debug.Log("[Yodo1 Mas] Reward video ad reward, give rewards to the player.");
-                    break;
-            }
-
-        });
-    }
     bool isBannerShown = false;
-
-          /*private void HandleShowResult(ShowResult result)
-          {
-            switch (result)
-            {
-              case ShowResult.Finished:
-              PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
-              money.text=PlayerPrefs.GetInt("Coin").ToString();
-                Debug.Log("The ad was successfully shown.");
-                //
-                // YOUR CODE TO REWARD THE GAMER
-                // Give coins etc.
-                break;
-              case ShowResult.Skipped:
-                Debug.Log("The ad was skipped before reaching the end.");
-                break;
-              case ShowResult.Failed:
-                Debug.LogError("The ad failed to be shown.");
-                break;
-            }
-          }*/
-
-    
-
 }
 
 

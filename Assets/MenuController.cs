@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Yodo1.MAS;
 //using UnityEngine.Advertisements;
+
+[RequireComponent(typeof(AdmobController))]
 public class MenuController : MonoBehaviour
 {
     public Text starsTotal;
     public Text money;
 
     public GameObject levelsPanel;
-    private string appId="4035249";
 
 
 
@@ -18,9 +18,6 @@ public class MenuController : MonoBehaviour
     public int storyLen=3;
 
     public GameObject plane;
-    
-    	private Yodo1U3dBannerAdView banner;
-
 
     /*
       After your home was destroyed by bomb, which has fallen into the lake you was living in, you need to find new one.
@@ -34,7 +31,7 @@ public class MenuController : MonoBehaviour
       meaning that them are not as easy as it can seems.
     */
     
-    
+    private AdmobController admob;
 
     void Start()
     {
@@ -49,7 +46,7 @@ public class MenuController : MonoBehaviour
             PlayerPrefs.SetInt("JetBoots",2);
             PlayerPrefs.SetInt("JetPack",1);
         }
-        //Advertisement.Initialize(appId,false);
+
         starsTotal.text=PlayerPrefs.GetInt("AllStars").ToString();
         money.text=PlayerPrefs.GetInt("Coin").ToString();
 
@@ -59,15 +56,7 @@ public class MenuController : MonoBehaviour
           PlayerPrefs.SetInt("storyShowed",1);
         }
 
-
-
-        InitializeSdk();
-        SetPrivacy(true, false, false);
-        SetDelegates();
-        
-
-        //StartCoroutine(BannerCoroutine());
-
+        admob = GetComponent<AdmobController>();
         
         // PlayerPrefs.SetInt("Completed0",1);
         // PlayerPrefs.SetInt("Completed1",1);
@@ -77,24 +66,8 @@ public class MenuController : MonoBehaviour
         // PlayerPrefs.SetInt("Completed5",1);
         // PlayerPrefs.SetInt("Completed6",1);
         // PlayerPrefs.SetInt("Completed7",1);
-		this.RequestBanner();
     }
 
-    private void RequestBanner()
-    {
-        // Clean up banner before reusing
-        if (banner != null)
-        {
-            banner.Destroy();
-        }
-
-        // Create a 320x50 banner at top of the screen
-        banner = new Yodo1U3dBannerAdView(Yodo1U3dBannerAdSize.Banner, Yodo1U3dBannerAdPosition.BannerTop | Yodo1U3dBannerAdPosition.BannerHorizontalCenter);
-
-		banner.LoadAd();
-
-    }
-    
     
     bool storyLine=true;
     public void nextPanel(int currentPanel){
@@ -172,127 +145,16 @@ public class MenuController : MonoBehaviour
 
 
     public void ShowRewardedAd()
-          {
-            /*if (Advertisement.IsReady("rewardedVideo"))
-            {
-              var options = new ShowOptions { resultCallback = HandleShowResult };
-              Advertisement.Show("rewardedVideo", options);
-            }*/
-             if(Yodo1U3dMas.IsRewardedAdLoaded()){
-                Yodo1U3dMas.ShowRewardedAd();
-            }
-          }
-
-
-    private void SetPrivacy(bool gdpr, bool coppa, bool ccpa)
     {
-        Yodo1U3dMas.SetGDPR(gdpr);
-        Yodo1U3dMas.SetCOPPA(coppa);
-        Yodo1U3dMas.SetCCPA(ccpa);
+        admob.showIntersitionalAd();
+        PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
+        money.text=PlayerPrefs.GetInt("Coin").ToString();
+
+        //todo: replace with real ShowRewardedAd
     }
 
-    private void InitializeSdk()
-    {
-        Yodo1U3dMas.InitializeSdk();
-    }
 
-    private void SetDelegates()
-    {
-        Yodo1U3dMas.SetInitializeDelegate((bool success, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InitializeDelegate, success:" + success + ", error: \n" + error.ToString());
-
-            if (success)
-            {
-                //StartCoroutine(BannerCoroutine());
-            }
-            else
-            {
-
-            }
-        });
-
-        Yodo1U3dMas.SetBannerAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] BannerdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Banner ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Banner ad error, " + error.ToString());
-                    break;
-            }
-        });
-
-        Yodo1U3dMas.SetInterstitialAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] InterstitialAdDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Interstital ad has been shown.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Interstital ad error, " + error.ToString());
-                    break;
-            }
-
-        });
-
-        Yodo1U3dMas.SetRewardedAdDelegate((Yodo1U3dAdEvent adEvent, Yodo1U3dAdError error) =>
-        {
-            Debug.Log("[Yodo1 Mas] RewardVideoDelegate:" + adEvent.ToString() + "\n" + error.ToString());
-            switch (adEvent)
-            {
-                case Yodo1U3dAdEvent.AdClosed:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has been closed.");
-                    break;
-                case Yodo1U3dAdEvent.AdOpened:
-                    Debug.Log("[Yodo1 Mas] Reward video ad has shown successful.");
-                    break;
-                case Yodo1U3dAdEvent.AdError:
-                    Debug.Log("[Yodo1 Mas] Reward video ad error, " + error);
-                    break;
-                case Yodo1U3dAdEvent.AdReward:
-                    PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
-                    money.text=PlayerPrefs.GetInt("Coin").ToString();
-                    Debug.Log("[Yodo1 Mas] Reward video ad reward, give rewards to the player.");
-                    break;
-            }
-
-        });
-    }
     bool isBannerShown = false;
-          /*private void HandleShowResult(ShowResult result)
-          {
-            switch (result)
-            {
-              case ShowResult.Finished:
-              PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+5);
-              money.text=PlayerPrefs.GetInt("Coin").ToString();
-                Debug.Log("The ad was successfully shown.");
-                //
-                // YOUR CODE TO REWARD THE GAMER
-                // Give coins etc.
-                break;
-              case ShowResult.Skipped:
-                Debug.Log("The ad was skipped before reaching the end.");
-                break;
-              case ShowResult.Failed:
-                Debug.LogError("The ad failed to be shown.");
-                break;
-            }
-          }*/
-
-
     
     public GameObject secondPartLevels;
     public void nextLevelsPanel(){
@@ -323,10 +185,4 @@ public class MenuController : MonoBehaviour
     public void rateGame(){
       Application.OpenURL("https://play.google.com/store/apps/details?id=com.VertexStudioGame.Aqua");
     }
-
-
-
-
-
-
 }
