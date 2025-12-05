@@ -18,7 +18,7 @@ public class JumperBox : MonoBehaviour
     void Update()
     {
 
-        rb.velocity=Vector3.up*2*dir;
+        rb.linearVelocity=Vector3.up*2*dir;
 
         //transform.Translate(Vector3.up/10*dir);
 

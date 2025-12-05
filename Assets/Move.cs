@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using Sentry;
 
 [RequireComponent(typeof(AdmobController))]
 public class Move : MonoBehaviour
@@ -37,29 +38,35 @@ public class Move : MonoBehaviour
     public PlayerSound sound;
 
     private AdmobController admob;
-	
+
     void Start()
     {
-        sound=GetComponent<PlayerSound>();
-        Time.timeScale=1;
+        sound = GetComponent<PlayerSound>();
+        Time.timeScale = 1;
 
-        extraLife=false;
+        extraLife = false;
 
-        coins.text=PlayerPrefs.GetInt("Coin").ToString();
+        coins.text = PlayerPrefs.GetInt("Coin").ToString();
         anim.idle();
-        Time.timeScale=1;
-        camera.player=gameObject;
-        if(PlayerPrefs.GetInt("Completed"+Application.loadedLevel.ToString())==1){
+        Time.timeScale = 1;
+        camera.player = gameObject;
+        if (PlayerPrefs.GetInt("Completed" + Application.loadedLevel.ToString()) == 1)
+        {
             best.gameObject.SetActive(true);
-            best.text=PlayerPrefs.GetInt("bestIn"+Application.loadedLevel.ToString())+" s";
+            best.text = PlayerPrefs.GetInt("bestIn" + Application.loadedLevel.ToString()) + " s";
+
+            SentrySdk.CaptureMessage("Reopened level #" + Application.loadedLevel.ToString());
         }
-        else{
+        else
+        {
             best.gameObject.SetActive(false);
+            
+            SentrySdk.CaptureMessage("Opened level #"+Application.loadedLevel.ToString());
         }
 
         StartCoroutine(scoreInc());
 
-       admob = GetComponent<AdmobController>();
+        admob = GetComponent<AdmobController>();
     }
 
     private bool right=false,left=false;
@@ -165,12 +172,14 @@ public class Move : MonoBehaviour
             particle[0].Play();
 
             winPanel.SetActive(true);
+            SentrySdk.CaptureMessage("Completed level #"+Application.loadedLevel.ToString());
             
             
 
-            if(lastLevel){
-                PlayerPrefs.SetInt("win",1);
-                move=0;
+            if (lastLevel)
+            {
+                PlayerPrefs.SetInt("win", 1);
+                move = 0;
                 stars.hideStars();
                 return;
             }
@@ -403,9 +412,14 @@ public class Move : MonoBehaviour
             if(PlayerPrefs.GetInt("!sound")==0)sound.play1();
             Debug.Log("starrrr");
             PlayerPrefs.SetInt("Get."+Application.loadedLevel.ToString()+"."+other.gameObject.name.ToString(),1);
+
             //particle[1].transform.parent=null;
-            particle[1].gameObject.SetActive(true);
-            particle[1].Play();
+            //particle[1].gameObject.SetActive(true);
+            //particle[1].Play();
+            var particleCopy = Instantiate(particle[1].gameObject, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
+            particleCopy.gameObject.SetActive(true);
+            particleCopy.GetComponent<ParticleSystem>().Play();
+
             stars.showStars(stars.currentStars);
             other.gameObject.SetActive(false);
 
@@ -418,9 +432,15 @@ public class Move : MonoBehaviour
 
             other.gameObject.SetActive(false);
             PlayerPrefs.SetInt("Coin",PlayerPrefs.GetInt("Coin")+1);
+
             //particle[2].transform.parent=null;
-            particle[2].gameObject.SetActive(true);
-            particle[2].Play();
+            // particle[2].gameObject.SetActive(true);
+            // particle[2].Play();
+
+            var particleCopy = Instantiate(particle[2].gameObject, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
+            particleCopy.gameObject.SetActive(true);
+            particleCopy.GetComponent<ParticleSystem>().Play();
+
             coins.text=PlayerPrefs.GetInt("Coin").ToString();
         }
 

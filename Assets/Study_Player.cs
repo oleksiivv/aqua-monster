@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Sentry;
 
 public class Study_Player : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class Study_Player : MonoBehaviour
 
         rightPanel.SetActive(true);
 
-
+        SentrySdk.CaptureMessage("Study level opened");
         
     }
 
@@ -409,7 +410,7 @@ public class Study_Player : MonoBehaviour
 
             
             
-
+            SentrySdk.CaptureMessage("Study level completed");
             winPanel.SetActive(true);
             Invoke(nameof(finishStudy),2);
 

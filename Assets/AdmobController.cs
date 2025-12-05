@@ -21,9 +21,12 @@ public class AdmobController : MonoBehaviour
 
     public static int adsCounter=0;
 
+    public IAPManager iap;
+
     //public UnityAdsController unityAds;
 
     void Awake(){
+        Debug.Log("Admob is being loaded...");
         RequestConfiguration requestConfiguration =
             new RequestConfiguration.Builder()
             .SetSameAppKeyEnabled(true).build();
@@ -34,7 +37,7 @@ public class AdmobController : MonoBehaviour
             CreateBannerView();
 
             if(PlayerPrefs.GetInt("first-Open",0)==1 && Application.loadedLevel > 1 && Application.loadedLevel < 17){
-                LoadBannerAd();
+                //LoadBannerAd();
              }
         });
 
@@ -88,13 +91,27 @@ public class AdmobController : MonoBehaviour
                 RegisterReloadHandler(_interstitialAd);
             });
     }
+    
+    void proposeIap(){
+        if(PlayerPrefs.GetInt("no_ads_purchased", 0) == 0){
+            iap.ShowPanel();
+        }
+    }
 
 
-      public bool showIntersitionalUnityAd(){
+      public bool showIntersitionalUnityAd()
+    {
+        if (! iap.canShowAds())
+        {
+            return true;
+        }
+
         if (_interstitialAd != null && _interstitialAd.CanShowAd())
         {
             Debug.Log("Showing interstitial ad.");
             _interstitialAd.Show();
+
+            Invoke(nameof(proposeIap), 0.5f);
 
             return true;
         }
@@ -102,7 +119,7 @@ public class AdmobController : MonoBehaviour
         {
             return false;
         }
-      }
+    }
 
     public void CreateBannerView()
     {
